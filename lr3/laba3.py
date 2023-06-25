@@ -288,10 +288,10 @@ def str_form(formula, types):
 
 def change_table(tabl, type_of_formula):
     if type_of_formula == 'con':
-        tabl = [reverse_method(row) for row in tabl]
-        tabl = [[cell if cell == 0 else ' ' for cell in row] for row in tabl]
+        tabl = [reverse_method(rows) for rows in tabl]
+        tabl = [[cell if cell == 0 else ' ' for cell in rows] for rows in tabl]
     else:
-        tabl = [[cell if cell == 1 else ' ' for cell in row] for row in tabl]
+        tabl = [[cell if cell == 1 else ' ' for cell in rows] for rows in tabl]
     return tabl
 
 
